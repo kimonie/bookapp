@@ -11,7 +11,7 @@ export default function AuthForm() {
     e.preventDefault();
     setMessage('Loading...');
 
-    const { data, error } = isLogin
+    const { error } = isLogin
       ? await supabase.auth.signInWithPassword({ email, password })
       : await supabase.auth.signUp({ email, password });
 
